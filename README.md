@@ -2,37 +2,39 @@
 
 
 ## Introduction:
-
+Guess if the displayed quote is from Ron Swanson. (Parks and Rec character) "Are you a real Ron Swanson fan?" OR
+same concept but pulling instagram photos by locations in LA and guess those locations. "How well do you know LA"
 
 ## Technologies
-Express, MongoDB, Bootstrape,
-Javascript, jQuery, CSS and HTML.
-
 Tell us, on a high-level what technologies you are going to use to build the game
+* Express, MongoDB, Bootstrape, Javascript, jQuery, CSS and HTML.
+
 Tell us how you plan on implementing the difficult parts
+To figure out how to alternate his real quotes vs made up ones that I will create.
 
 
 ## MVP
-* The target cursor to interact with the moving object.
-* scores points when each object is clicked
-* calculate total scores
+* Have the backend to successfully get Ron Swanson's quotes from https://ron-swanson-quotes.herokuapp.com/v2/quotes
+* The page will have the character's photo, quote, and text display that asks if this is his real quote from the series.
+* A round will tests a player up to 10 random quotes - 3 wrongs then player will get the message that you are not a real fan.
 
 
 ## Goals
-create an effect similar to the dog picking up the dead duck after each shot.
-lose 2 birds then game over
+I'd like to add additional comic effects each time when a player guessed right and wrong.
+set up a timer for each Yes/No quote.
 
 
 ## Stretch Goals
-configure different scores base on how long it takes for the player to shoot the moving object
+add more characters and populate my database with their quotes or facts.
+
 
 
 ## Timeline
 What do you need to have done by
-* Monday - I should have a canvas with the background field that has ground, grass, trees and a moving target cursor.
-* Tuesday - I should have at least 1 moving objects to shoot in 1 round and the object either explode or change image.
-* Wednesday - for each moving object shot - keep scoring and determine wins.
-* Thursday - set up round 2 if possible with faster moving object
+* Monday - set up GET homepage with ejs view. my page should have the functionality that can add quotes.
+* Tuesday - set up the rest - update quote and delete quote from my database.
+* Wednesday - finish all front end prettiness.
+* Thursday - test and validate display for demo
 
 
 ## Wireframes
