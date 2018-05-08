@@ -2,7 +2,7 @@
   position: absolute;
   width: 100%;
   height: auto;
-  z-index: 0;
+  /* z-index: 0; */
 }
 
 #egg {
@@ -13,7 +13,7 @@
   width: 90px;
   top: 180px;
   left: 780px;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 form {
@@ -21,13 +21,19 @@ form {
   z-index: 1;
   display: inline-block;
 }
+#fans {
+  position: absolute;
+  top: 260px;
+}
 
 #addQuote {
   left: 1150px;
-  bottom: -240px;
+  top: 260px;
+  /* bottom: -240px; */
 }
 
 #external {
   position: absolute;
-  z-index: 1;
+  top: 400px;
+  left: 150px;
 }

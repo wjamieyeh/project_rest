@@ -9,35 +9,30 @@
 <a href="/">See the cool home page again</a>
 <hr> %>
 
-  <div>
-    <p id="external">"Pull API quote"</p>
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="column">
+        <img class="background" src="/images/ron_swanson_stage.jpg">
+      </div>
 
 
-    <div>
-      <a href="/fans">
-    <p>
-      <button type="button" class="btn btn-primary btn-sm">Fan's Quote</button>
-    </p>
-      </a>
-    </div>
+      <div class="col-sm">
+        <a href="/fans">
+          <button id="fans" type="button" class="btn btn-primary btn-sm">Click Here To See Other Fan's Quote</button>
+        </a>
+      </div>
 
-  <% templateRons.forEach((ron) => {%>
+      <div class="col-sm">
+        <p id="external">"Pull API quote"</p>
+      </div>
 
-      <ul>
-        <li><%=ron.quote%>    <form action="/rons/<%=ron._id%>" method="post">
-              <input type="hidden" name="_method" value="DELETE">
-              <input type="submit" class="btn btn-danger btn-sm" value="Delete">
-            </form>
-        </li>
-      </ul>
+      <form id="addQuote" action="/fans" method="post">
+        <input type="text" name="quote" placeholder="What would Ron say?">
+        <input type="submit" class="btn btn-primary btn-sm" value="add quote">
+      </form>
 
-  <%})%>
-
-  <form id="addQuote" action="/rons" method="post">
-    <input type="text" name="quote" placeholder="What would Ron say?">
-    <input type="submit" class="btn btn-primary btn-sm" value="add quote">
-  </form>
-
+  </div>
 </div>
 
 <% include partials/end.ejs %>

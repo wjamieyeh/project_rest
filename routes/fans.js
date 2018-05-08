@@ -14,5 +14,16 @@ FansRouter.get('/', (req, res) => {
   })
 });
 
+FansRouter.post('/', (req, res) => {
+  let newRon = new Ron({
+    quote: req.body.quote
+  });
+
+  newRon.save().then((ron) => {
+    res.redirect('/fans');
+  }, (error) => {
+    res.status(400).send("400 Bad Request");
+  });
+});
 
 module.exports = FansRouter;
