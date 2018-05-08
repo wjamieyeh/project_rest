@@ -1,17 +1,23 @@
 <% include partials/header.ejs %>
 
-<h4>Let's see if you are bacon worthy...</h4>
+  <script src='../js/main.js'></script>
+</head>
+<body>
+
+<%# <h4>are you bacon worthy...</h4>
 <a href="/">See the cool home page again</a>
-<hr>
+<hr> %>
 
-  <form action="/rons" method="post">
-    <input type="text" name="quote" placeholder="What would Ron say?">
-    <input type="submit" value="add quote">
-  </form>
+
+  <img class="background" src="/images/ron_swanson_stage2.jpg">
+
 
   <br>
   <br>
 
+  <div>
+    <p class="external">"Pull API quote"</p>
+  </div>
 
   <% templateRons.forEach((ron) => {%>
 
@@ -25,6 +31,9 @@
 
   <%})%>
 
-
+  <form id="addQuote" action="/rons" method="post">
+    <input type="text" name="quote" placeholder="What would Ron say?">
+    <input type="submit" class="btn btn-primary btn-sm" value="add quote">
+  </form>
 
 <% include partials/end.ejs %>
