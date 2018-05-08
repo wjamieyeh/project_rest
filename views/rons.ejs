@@ -1,5 +1,6 @@
 <% include partials/header.ejs %>
 
+  <script src='../vendor/axios.min.js'></script>
   <script src='../js/main.js'></script>
 </head>
 <body>
@@ -16,7 +17,7 @@
   <br>
 
   <div>
-    <p class="external">"Pull API quote"</p>
+    <p id="external">"Pull API quote"</p>
   </div>
 
   <% templateRons.forEach((ron) => {%>
