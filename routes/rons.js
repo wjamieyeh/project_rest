@@ -14,7 +14,6 @@ RonsRouter.get('/', (req, res) => {
   })
 });
 
-
 //HOW TO TROUBLESHOOT
 // RonsRouter.get('/', (req, res) => {
 //   //res.send("test rons");
@@ -22,6 +21,41 @@ RonsRouter.get('/', (req, res) => {
 //     console.log(rons);
 //   });
 // });
+
+RonsRouter.get('/:id', (req, res) => {
+  let id = req.params.id;
+  Ron.findById(id).then((ron) => {
+    res.render('rons', {  //using rons because i want to have it updated on the same page
+      templateRon: ron
+    });
+  }, (error) => {
+    res.status(400).send("400 Bad Request");
+  });
+});
+
+// RonsRouter.put('/:id', (req, res) => {
+//   let id = req.params.id;
+//   let updatedQuote = req.body.quote;
+//
+//   Ron.findByIdAndUpdate(id, {$set: {quote: updatedQuote}}, {new: true}).then((updatedQuote) => {
+//     res.render('rons', {
+//       templateRons: updatedQuote
+//     });
+//   }, (error) => {
+//     res.status(400).send(error);
+//   });
+// });
+
+RonsRouter.delete('/:id', (req, res) => {
+  let id = req.params.id;
+  let updatedQuote = req.body.quote;
+
+  Ron.findByIdAndRemove(id).then((removedRon) => {
+    res.redirect('/rons');
+  }, (error) => {
+    res.status(400).send("delete is getting an error");
+  });
+});
 
 
 RonsRouter.post('/', (req, res) => {
