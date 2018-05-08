@@ -9,16 +9,17 @@
 <a href="/">See the cool home page again</a>
 <hr> %>
 
-
-  <img class="background" src="/images/ron_swanson_stage2.jpg">
-
-
-  <br>
-  <br>
-
   <div>
     <p id="external">"Pull API quote"</p>
-  </div>
+
+
+    <div>
+      <a href="/fans">
+    <p>
+      <button type="button" class="btn btn-primary btn-sm">Fan's Quote</button>
+    </p>
+      </a>
+    </div>
 
   <% templateRons.forEach((ron) => {%>
 
@@ -36,5 +37,7 @@
     <input type="text" name="quote" placeholder="What would Ron say?">
     <input type="submit" class="btn btn-primary btn-sm" value="add quote">
   </form>
+
+</div>
 
 <% include partials/end.ejs %>

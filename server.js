@@ -7,6 +7,7 @@ const methodOverride = require('method-override');
 //resources
 const mongoose = require('mongoose');
 const RonsRouter = require('./routes/rons');
+const FansRouter = require('./routes/fans');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -23,6 +24,7 @@ app.use(methodOverride((req, res) => {
 
 
 app.use('/rons', RonsRouter);
+app.use('/fans', FansRouter);
 
 app.set('view engine', 'ejs');
 

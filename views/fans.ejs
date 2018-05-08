@@ -1,0 +1,20 @@
+<% include partials/header.ejs %>
+
+<h2>fans page</h2>
+
+<% templateRons.forEach((ron) => {%>
+
+    <ul>
+      <li><%=ron.quote%>    <form action="/rons/<%=ron._id%>" method="post">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+          </form>
+      </li>
+    </ul>
+
+<%})%>
+
+
+
+
+<% include partials/end.ejs %>
