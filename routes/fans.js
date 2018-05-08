@@ -22,7 +22,7 @@ FansRouter.post('/', (req, res) => {
   newRon.save().then((ron) => {
     res.redirect('/fans');
   }, (error) => {
-    res.status(400).send("400 Bad Request");
+    res.status(400).send("You didn't add any quotes...");
   });
 });
 

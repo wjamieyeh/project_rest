@@ -23,17 +23,21 @@ form {
 }
 #fans {
   position: absolute;
-  top: 260px;
+  /* top: 260px; */
 }
 
 #addQuote {
-  left: 1150px;
-  top: 260px;
+  left: 1160px;
+  /* top: 260px; */
   /* bottom: -240px; */
 }
 
 #external {
   position: absolute;
-  top: 400px;
-  left: 150px;
+  font-size: 30px;
+  top: 140px;
+  text-align: center;
+  color: white;
+  /* right: 90px; */
+  /* left: 50px; */
 }
