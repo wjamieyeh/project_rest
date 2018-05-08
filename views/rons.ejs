@@ -9,4 +9,17 @@
     <input type="submit" value="add quote">
   </form>
 
+  <% templateRons.forEach((ron) => {%>
+    <a href="/rons/<%=ron._id%>">
+      <ul>
+        <li><%=ron.quote%><form action="/rons/<%=ron._id%>" method="post">
+              <input type="hidden" name="_method" value="DELETE">
+              <button type="button" class="btn btn-danger btn-sm">Delete</button>
+            </form></li>
+      </ul>
+    </a>
+
+
+
+    <%})%>
 <% include partials/end.ejs %>
