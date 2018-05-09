@@ -14,6 +14,12 @@ RonsRouter.get('/', (req, res) => {
   })
 });
 
+RonsRouter.get('/nextquote', (req, res) => {
+  Ron.aggregate().sample(1).then((ron)=> {
+  res.send(ron);
+  })
+});
+
 //HOW TO TROUBLESHOOT
 // RonsRouter.get('/', (req, res) => {
 //   //res.send("test rons");
@@ -21,6 +27,7 @@ RonsRouter.get('/', (req, res) => {
 //     console.log(rons);
 //   });
 // });
+
 
 RonsRouter.get('/:id', (req, res) => {
   let id = req.params.id;

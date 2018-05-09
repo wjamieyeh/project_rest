@@ -28,10 +28,11 @@ form {
 
 #yes {
   position: absolute;
-  top: 300px
+  bottom: 200px
   left: 500px;
   height: 200px;
   width: 200px;
+  z-index: -1;
 }
 
 #no {
@@ -39,4 +40,9 @@ form {
   height: 200px;
   width: 200px;
   left: 500px
+}
+
+#start {
+  position: absolute;
+  top: 300px;
 }

@@ -34,6 +34,10 @@ app.get('/', (req, res) => {
   res.render('home')
 });
 
+// app.get('/test', (req, res) => {
+  // console.log('Test Works');
+//   res.send('Works')
+// })
 
 
 app.listen(port, () => {
