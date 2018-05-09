@@ -34,6 +34,7 @@ $(function () {
   //if number is even, pull from API, else pull from my collection
   const startGuess = function () {
 
+
     if (isEven()) {
       axios.get('https://ron-swanson-quotes.herokuapp.com/v2/quotes')
         .then(response => {
@@ -43,9 +44,9 @@ $(function () {
       // need to modify the link once i deploy to heroku
       axios.get('http://localhost:3000/rons/nextquote')
       .then(response => {
-        let quote = JSON.stringify(response.data);
+        let quote = JSON.stringify(response.data[0].quote);
         $('#external').text(quote);
-        console.log(response.data);
+        console.log(response.data[0].quote);
       });
     }
   }
