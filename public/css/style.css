@@ -38,6 +38,20 @@ form {
   top: 140px;
   text-align: center;
   color: white;
-  /* right: 90px; */
-  /* left: 50px; */
+}
+
+#yes {
+  position: absolute;
+  top: 300px
+  left: 500px;
+  height: 200px;
+  width: 200px;
+  /* z-index: auto; */
+}
+
+#no {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  /* z-index: 1; */
 }
