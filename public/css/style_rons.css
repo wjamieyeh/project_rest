@@ -28,21 +28,22 @@ form {
 
 #yes {
   position: absolute;
-  bottom: 200px
-  left: 500px;
-  height: 200px;
-  width: 200px;
+  bottom: 250px;
+  height: 100px;
+  width: 90px;
+  left: 650px;
   /* z-index: -1; */
 }
 
 #no {
   position: absolute;
-  height: 200px;
-  width: 200px;
-  left: 500px
+  bottom: 250px;
+  height: 100px;
+  width: 90px;
+  left: 1000px
 }
 
 #start {
   position: absolute;
-  top: 300px;
+  top: 80px;
 }

@@ -7,41 +7,36 @@
 <body>
 
 
-  <div class="container-fluid">
+<div class="container-fluid">
     <div class="row">
 
-      <div class="column">
-        <%# image from https://wallup.net/minimalism-humor-ron-swanson-parks-and-rec/ %>
-        <img class="background" src="/images/ron_swanson_stage.jpg">
-      </div>
+        <div class="column">
+          <%# image from https://wallup.net/minimalism-humor-ron-swanson-parks-and-rec/ %>
+          <img class="background" src="/images/ron_swanson_stage.jpg">
+        </div>
 
+        <div class="col-xs">
+          <a href="/fans">
+            <button id="fans" type="button" class="btn btn-primary btn-sm">Click Here To See Other Fan's Quote</button>
+          </a>
+        </div>
 
-      <div class="col-xs">
-        <a href="/fans">
-          <button id="fans" type="button" class="btn btn-primary btn-sm">Click Here To See Other Fan's Quote</button>
-        </a>
-      </div>
+        <div class="col-sm">
+          <p id="external">Are You Bacon Worthy?</p>
+        </div>
 
-
-      <div class="col-sm">
-        <p id="external">Are You Bacon Worthy?</p>
-      </div>
-
-      <form id="addQuote" action="/fans" method="post">
-        <input type="text" name="quote" placeholder="What would Ron say?">
-        <input type="submit" class="btn btn-primary btn-sm" value="add quote">
-      </form>
-
-
-  </div>
-  <div class="row">
-    <img id="yes" src="/images/ron_swanson_answer_yes.jpg">
-    <img id="no" src="/images/ron_swanson_answer_no.jpg">
-  </div>
-  <div class="row">
-    <button id="start" type="button" class="btn btn-success btn-md">Start</button>
-
-  </div>
+        <form id="addQuote" action="/fans" method="post">
+          <input type="text" name="quote" placeholder="What would Ron say?">
+          <input type="submit" class="btn btn-primary btn-sm" value="add quote">
+        </form>
+    </div>
+        <div class="row">
+          <img id="yes" src="/images/ron_swanson_answer_yes1.jpg">
+          <img id="no" src="/images/ron_swanson_answer_no1.jpg">
+        </div>
+        <div class="row">
+          <button id="start" type="button" class="btn btn-success btn-md">Start</button>
+        </div>
 </div>
 
 <% include partials/end.ejs %>

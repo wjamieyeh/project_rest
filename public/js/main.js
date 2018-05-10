@@ -21,6 +21,7 @@ $(function () {
     }
   };
 
+  //start button to start the same, and get next quote on click
   $start.click(function() {
     startQuote();
     $(this).text("Next Quote");
@@ -28,13 +29,14 @@ $(function () {
     noClicked = false;
   });
 
-
+  //if yes button is clicked for either REAL or FAKE quote
   $yes.click(function() {
     yesClicked = true;
     noClicked = false;
     startQuote();
   });
 
+  //if no button is clicked for either REAL or FAKE quote
   $no.click(function() {
     noClicked = true;
     yesClicked = false;
