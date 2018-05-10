@@ -47,34 +47,34 @@ $(function () {
   //if number is even, pull from external API, else pull from my collection rons
   const startQuote = function () {
 
-    if (isEven()) {
+    if (false) {
       isReal = true;
-      //console.log(isReal);
+      console.log(isReal);
       axios.get('https://ron-swanson-quotes.herokuapp.com/v2/quotes')
         .then(response => {
           let quote = response.data
           $('#external').text(`"${quote}"`);
             if (yesClicked) {
               score = score + 100;
-              console.log(score);
+              // console.log(score);
             } else if (noClicked){
               live--;
-              console.log(live);
+              // console.log(live);
             }
         });
     } else {
       isReal = false;
-      //console.log(isReal);
+      console.log(isReal);
       axios.get('/rons/nextquote')
       .then(response => {
           let quote = JSON.stringify(response.data.quote);
           $('#external').text(quote);
-            if (yesClicked) {
+            if (noClicked) {
               score = score + 100;
-              console.log(`this is: ${score}`);
-            } else if (noClicked){
+              // console.log(score);
+            } else if (yesClicked){
               live--;
-              console.log(live);
+              // console.log(live);
             }
       });
     }

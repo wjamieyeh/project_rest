@@ -47,3 +47,7 @@ form {
   position: absolute;
   top: 80px;
 }
+
+.progress {
+  bottom: 300px;
+}
