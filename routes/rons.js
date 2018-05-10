@@ -16,7 +16,7 @@ RonsRouter.get('/', (req, res) => {
 
 RonsRouter.get('/nextquote', (req, res) => {
   Ron.aggregate().sample(1).then((ron)=> {
-  res.send(ron);
+  res.send(ron[0]);
   })
 });
 

@@ -4,8 +4,11 @@ $(function () {
   const $yes = $('#yes');
   const $no = $('#no');
   const $start = $('#start');
-  // const mongoose = require('./../db/mongoose');
-  // const Ron = require('./../models/ron');
+  let isReal;
+  var yesClicked = false;
+  var noClicked = false;
+  var score = 0;
+  var live = 3;
 
 
   //check if number is even: true, false
@@ -19,37 +22,60 @@ $(function () {
   };
 
   $start.click(function() {
-    startGuess();
+    startQuote();
     $(this).text("Next Quote");
+    yesClicked = false;
+    noClicked = false;
   });
 
+
   $yes.click(function() {
-    console.log('yes click is working');
+    yesClicked = true;
+    noClicked = false;
+    startQuote();
   });
 
   $no.click(function() {
-    console.log('no click is working');
+    noClicked = true;
+    yesClicked = false;
+    startQuote();
   });
 
-  //if number is even, pull from API, else pull from my collection
-  const startGuess = function () {
 
+  //if number is even, pull from external API, else pull from my collection rons
+  const startQuote = function () {
 
     if (isEven()) {
+      isReal = true;
+      //console.log(isReal);
       axios.get('https://ron-swanson-quotes.herokuapp.com/v2/quotes')
         .then(response => {
-          $('#external').text(`" ${response.data} "`);
+          let quote = response.data
+          $('#external').text(`"${quote}"`);
+            if (yesClicked) {
+              score = score + 100;
+              console.log(score);
+            } else if (noClicked){
+              live--;
+              console.log(live);
+            }
         });
     } else {
-      // need to modify the link once i deploy to heroku
-      axios.get('http://localhost:3000/rons/nextquote')
+      isReal = false;
+      //console.log(isReal);
+      axios.get('/rons/nextquote')
       .then(response => {
-        let quote = JSON.stringify(response.data[0].quote);
-        $('#external').text(quote);
-        console.log(response.data[0].quote);
+          let quote = JSON.stringify(response.data.quote);
+          $('#external').text(quote);
+            if (yesClicked) {
+              score = score + 100;
+              console.log(`this is: ${score}`);
+            } else if (noClicked){
+              live--;
+              console.log(live);
+            }
       });
     }
   }
-
 
 });
