@@ -47,6 +47,11 @@ $(function () {
         $yes.click(function() {
             $('#gif').css("z-index", "0");
             score = score + 100;
+            if (score >= 500) {
+              $('#gifDance').css("z-index", "0");
+              $('#gif').css("z-index", "-1");
+              $('#gifNo').css("z-index", "-1");
+            }
             console.log(score);
         });
 
@@ -74,6 +79,11 @@ $(function () {
       $no.click(function() {
         $('#gif').css("z-index", "0");
         score = score + 100;
+        if (score >= 500) {
+          $('#gifDance').css("z-index", "0");
+          $('#gif').css("z-index", "-1");
+          $('#gifNo').css("z-index", "-1");
+        }
         console.log(score);
       });
 
