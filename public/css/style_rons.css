@@ -104,14 +104,15 @@ form {
   top: 280px;
 }
 
-/* #winBacon {
+#winBacon {
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   height: 80px;
   width: 160px;
-  left: 710px;
-  top: 470px;
-} */
+  left: 1020px;
+  top: 320px;
+}
+
 /* .show-hide-z {
   z-index: -1;
 } */

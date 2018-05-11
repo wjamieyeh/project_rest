@@ -51,6 +51,7 @@ $(function () {
               $('#gifDance').css("z-index", "0");
               $('#gif').css("z-index", "-1");
               $('#gifNo').css("z-index", "-1");
+              $('#winBacon').css("z-index", "-1");
             }
             console.log(score);
         });
@@ -83,6 +84,7 @@ $(function () {
           $('#gifDance').css("z-index", "0");
           $('#gif').css("z-index", "-1");
           $('#gifNo').css("z-index", "-1");
+          $('#winBacon').css("z-index", "-1");
         }
         console.log(score);
       });
