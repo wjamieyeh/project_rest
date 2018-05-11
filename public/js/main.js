@@ -5,8 +5,6 @@ $(function () {
   const $no = $('#no');
   const $start = $('#start');
   let isReal;
-  // let yesClicked = false;
-  // let noClicked = false;
   var score = 0;
   var live = 3;
 
@@ -32,21 +30,6 @@ $(function () {
     startQuote();
     $(this).text("Next Quote");
   });
-
-
-  //if yes button is clicked for either REAL or FAKE quote
-  // $yes.click(function() {
-    // yesClicked = true;
-    // noClicked = false;
-    // startQuote();
-  // });
-
-  //if no button is clicked for either REAL or FAKE quote
-  // $no.click(function() {
-    // noClicked = true;
-    // yesClicked = false;
-  //   startQuote();
-  // });
 
 
   const startQuote = function () {
