@@ -36,7 +36,7 @@ form {
 
 #yes {
   position: absolute;
-  bottom: 390px;
+  bottom: 370px;
   height: 100px;
   width: 90px;
   left: 650px;
@@ -51,7 +51,7 @@ form {
 
 #no {
   position: absolute;
-  bottom: 390px;
+  bottom: 370px;
   height: 100px;
   width: 90px;
   left: 1000px;
@@ -85,14 +85,14 @@ form {
   position: absolute;
   z-index: -1;
   left: 620px;
-  top: 450px;
+  top: 470px;
 }
 
 #gifNo {
   position: absolute;
   z-index: -1;
   left: 710px;
-  top: 450px;
+  top: 470px;
 }
 /* .show-hide-z {
   z-index: -1;
