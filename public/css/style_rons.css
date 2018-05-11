@@ -40,7 +40,13 @@ form {
   height: 100px;
   width: 90px;
   left: 650px;
+  opacity: 0.8;
   /* z-index: -1; */
+}
+
+#yes:hover {
+  background-color: green;
+  opacity: 1;
 }
 
 #no {
@@ -48,7 +54,13 @@ form {
   bottom: 390px;
   height: 100px;
   width: 90px;
-  left: 1000px
+  left: 1000px;
+  opacity: 0.8;
+}
+
+#no:hover {
+  background-color: red;
+  opacity: 1;
 }
 
 #start {
@@ -57,9 +69,15 @@ form {
   left: 10px;
 }
 
-.progress {
+/* #next {
+  position: absolute;
+  top: 80px;
+  left: 100px;
+} */
+
+/* .progress {
   bottom: 300px;
-}
+} */
 
 
 
