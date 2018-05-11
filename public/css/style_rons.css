@@ -26,9 +26,17 @@ form {
   color: white;
 }
 
+#question {
+  position: absolute;
+  font-size: 30px;
+  color: white;
+  top: 280px;
+  left: 650px;
+}
+
 #yes {
   position: absolute;
-  bottom: 250px;
+  bottom: 390px;
   height: 100px;
   width: 90px;
   left: 650px;
@@ -37,7 +45,7 @@ form {
 
 #no {
   position: absolute;
-  bottom: 250px;
+  bottom: 390px;
   height: 100px;
   width: 90px;
   left: 1000px
@@ -46,8 +54,28 @@ form {
 #start {
   position: absolute;
   top: 80px;
+  left: 10px;
 }
 
 .progress {
   bottom: 300px;
 }
+
+
+
+#gif {
+  position: absolute;
+  z-index: -1;
+  left: 620px;
+  top: 450px;
+}
+
+#gifNo {
+  position: absolute;
+  z-index: -1;
+  left: 710px;
+  top: 450px;
+}
+/* .show-hide-z {
+  z-index: -1;
+} */

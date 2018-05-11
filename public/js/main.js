@@ -23,6 +23,8 @@ $(function () {
 
   //start button to start the same, and get next quote on click
   $start.click(function() {
+    $('#gif').css("z-index", "-1");
+    $('#gifNo').css("z-index", "-1");
     startQuote();
     $(this).text("Next Quote");
     yesClicked = false;
@@ -47,7 +49,7 @@ $(function () {
   //if number is even, pull from external API, else pull from my collection rons
   const startQuote = function () {
 
-    if (false) {
+    if (isEven()) {
       isReal = true;
       console.log(isReal);
       axios.get('https://ron-swanson-quotes.herokuapp.com/v2/quotes')
@@ -55,11 +57,12 @@ $(function () {
           let quote = response.data
           $('#external').text(`"${quote}"`);
             if (yesClicked) {
+              $('#gif').css("z-index", "0");
+              // $('#gif').toggleClass('show-hide-z');
               score = score + 100;
-              // console.log(score);
             } else if (noClicked){
+              $('#gifNo').css("z-index", "0");
               live--;
-              // console.log(live);
             }
         });
     } else {
@@ -71,8 +74,10 @@ $(function () {
           $('#external').text(quote);
             if (noClicked) {
               score = score + 100;
+              $('#gif').css("z-index", "0");
               // console.log(score);
             } else if (yesClicked){
+              $('#gifNo').css("z-index", "0");
               live--;
               // console.log(live);
             }
