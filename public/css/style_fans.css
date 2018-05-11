@@ -1,5 +1,11 @@
-.background {
-  position: absolute;
-  width: 100%;
-  height: auto;
+body {
+  background-color: #efebc6;
+}
+
+h2 {
+  font-family: 'Pangolin', cursive;
+}
+
+h6 {
+  font-family: 'Pangolin', cursive;
 }

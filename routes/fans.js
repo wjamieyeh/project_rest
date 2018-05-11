@@ -3,6 +3,7 @@ const mongoose = require('./../db/mongoose');
 const FansRouter = express.Router();
 const Ron = require('./../models/ron');
 
+FansRouter.use(express.static( "public" ) );
 
 FansRouter.get('/', (req, res) => {
   Ron.find().then((rons) => {
