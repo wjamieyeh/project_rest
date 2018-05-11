@@ -1,5 +1,17 @@
 body {
-  background-color: #efebc6;
+  /* background-color: #efebc6; */
+  /* background:url(/images/bacon.png) repeat left top;
+  background-size: 500px 200px; */
+  padding: 50px;
+  background-clip: border-box;
+}
+
+#bacon {
+  position: absolute;
+  left: 550px;
+  top: 40px;
+  height: 80px;
+  width: 160px;
 }
 
 h2 {
